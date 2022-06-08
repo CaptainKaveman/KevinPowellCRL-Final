@@ -27,69 +27,55 @@ Users should be able to:
 ### Screenshot
 
 ![1440px Screen Shot](./img/screenshots/full%20size%20resolution.png)
-![999px Screen Shot](./img/screenshots/md%20size%20resolution.png)
+![820px Screen Shot](./img/screenshots/md%20size%20resolution.png)
 ![375px Screen Shot](./img/screenshots/sm%20size%20resolution.png)
 
 ### Links
 
-- Solution URL: [https://github.com/CaptainKaveman/Interactive-rating]
-- Live Site URL: [https://captainkaveman.github.io/Interactive-rating]
+- Solution URL: [https://github.com/CaptainKaveman/KevinPowellCRL-Final]
+- Live Site URL: [https://captainkaveman.github.io/KevinPowellCRL-Final/]
 
 ## My process
 
-I prefer to start with the mobile design and then add my media query to add responsiveness. I started with adding all of the HTML that would be needed for the site. After the HTML was done I added the custom classes that I would need. I then linked to my style sheet and added my CSS stylings. I started with creating the card and then worked from the top down to get my styling done. I used radio buttons to create the number options of 1 to 5. After the first card was done I added a custom class called .hidden to hide the card and then created the thank you card. I used a custom class called .card that is shared between the two cards to set the size of them.
-
-After the CSS was styled I worked on creating my function to identify what radio button was selected and to change the span tag to that value. Also in that function it will remove the hidden class from the thank you card (.card2) and then add the hidden class to the selection card (.card1). This function was added to the HTML submit button using onclick. I also created another function to reset the previous selection of the radio button if the page is refreshed. This was added to the body element using onload.
+This in my first project in a while that I did not start with mobile first. I learned that I prefer to start with the mobile design, because I find it a little easier to create the media querys. I wish that I had worked on my small and medium screen size first for the navigation bar. I had to redo a few things since I was adding in the hamburger button to display my nav menu. With this challenge I also wanted to practice creating a site using SASS. This is my first project using SCSS to create my styles.
 
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
-- Mobile-first workflow
+- SASS/SCSS
 - Vanilla JavaScript
 
 ### What I learned
 
-This was my first project that uses JavaScript to interact with elements on a webpage. I learned a lot about how to have JavaScript code look for elements and attributes and manipulate it.
+This was my first project that I used SCSS to create the styles and I learned a lot. I used the two mixins below to quickly adjust the styles for various sections. I really enjoyed working with SASS and look forward to leaning more features.
 
-```html
-<div class="submit">
-	<button type="submit" onclick="results();">Submit</button>
-</div>
-```
-
-```css
-.hidden {
-	display: none;
+```scss
+@mixin container($width: 90%, $max-width: 75em) {
+  margin: 0 auto;
+  width: $width;
+  max-width: $max-width;
+  position: relative;
 }
-```
 
-```js
-function results() {
-	const radio = document.getElementsByName("rating");
-	const span = document.querySelector("span");
-	const remove = document.getElementById("card2").classList.remove("hidden");
-	const add = document.getElementById("card1").classList.add("hidden");
-	for (let i = 0; i <= radio.length; i++) {
-		if (radio[i].checked === true) {
-			span.textContent = i + 1;
-			return remove, add;
-		}
-	}
+@mixin row($display: flex, $justify: space-between, $flex-dir: row) {
+  display: $display;
+  justify-content: $justify;
+  flex-direction: $flex-dir;
 }
 ```
 
 ### Continued development
 
-For the continuation of this project I want to use SASS for the CSS styling and look at using some JavaScript packages like JQuery. I also haven't been able to add a check for the submit button on click to make sure that a radio button has been selected before it changes to the thank you card. Adding an else statement with an alert would still cause the thank you card to be displayed and the alert would always show.
+For the continuation of this project I would like to create other pages that the navigation can link to. I want to practice UI and UX design and then code that into a working site. Similarly to this project and those that I have completed from Frontendmento.io.
 
 ### Useful resources
 
-- [Mozilla Web Docs](https://developer.mozilla.org/en-US/docs/Web) - This helped me look up the vanilla JavaScript to understand how to use the different methods.
-- [Kevin Powell](https://www.youtube.com/kepowob) - His videos are amazing and have really helped to understand a lot about CSS. He is also the reason I started with mobile first, which I felt was a lot easier.
+- [Kevin Powell](https://www.youtube.com/kepowob) - Tons of resources and really helped me to understand CSS. His videos also helped me learn a little bit about SASS and I look forward to taking the beyondCSS course to further my knowledge.
+- [Mozilla Web Docs](https://developer.mozilla.org/en-US/docs/Web) - This helped me look up different styling options, and learn how some of them work.
+- [W3schools](w3schools.com) - This is another great source for information on various programming languages.
 
 ## Author
 
 - Website - [Kyle Corwin](https://www.kylecor.win)
-- Frontend Mentor - [@CaptainKaveman](https://www.frontendmentor.io/profile/CaptainKaveman)
+- GitHub - [@CaptainKaveman](https://github.com/CaptainKaveman)
 - Twitter - [@TheKyleCorwin](https://www.twitter.com/TheKyleCorwin)
