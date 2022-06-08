@@ -26,9 +26,9 @@ Users should be able to:
 
 ### Screenshot
 
-![1440px Screen Shot](./img/screenshots/full%20size%20resolution.png)
-![820px Screen Shot](./img/screenshots/md%20size%20resolution.png)
-![375px Screen Shot](./img/screenshots/sm%20size%20resolution.png)
+![1440px Screen Shot](./img/screenshots/full-size-resolution.png)
+![820px Screen Shot](./img/screenshots/md-size-resolution.png)
+![375px Screen Shot](./img/screenshots/sm-size-resolution.png)
 
 ### Links
 
